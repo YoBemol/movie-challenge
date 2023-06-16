@@ -4,19 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './templates/header/header.component';
-import { LoginComponent } from './vistas/login/login.component';
-import { MoviesComponent } from './vistas/movies/movies.component';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent,
-    MoviesComponent
+    routingComponents
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

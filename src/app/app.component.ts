@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ProductService } from './services/product.service';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +8,4 @@ import { ProductService } from './services/product.service';
 export class AppComponent {
   title = 'movie-challenge';
 
-  constructor(
-    private productService: ProductService
-  ) {
-    this.productService.getProduct().subscribe(resp=>{
-      console.log(resp);
-      
-    })
-  }
 }
