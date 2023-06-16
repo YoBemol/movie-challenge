@@ -10,32 +10,19 @@ import { Router } from '@angular/router'
 })
 export class MoviesComponent implements OnInit{
 
-  // @Input() movies: MoviesI = {
-  //   "adult": false,
-  //   "backdrop_path": '',
-  //   "genre_ids": [],
-  //   "id": 0,
-  //   "original_language": '',
-  //   "original_title": '',
-  //   "overview": '',
-  //   "popularity": 0,
-  //   "poster_path": '',
-  //   "release_date": '',
-  //   "title": '',
-  //   "video": false,
-  //   "vote_average": 0,
-  //   "vote_count": 0
-  // }
-  movies: MoviesI [] = [];
+  
+  movies!: any;   
 
-  constructor(private api:ApiService, private router: Router){ //, private router: Router
+  constructor(private api:ApiService, private router: Router){
 
   }
 
   ngOnInit(): void {
-    this.api.getMovies().subscribe(data =>{
-      console.log(data)
-      this.movies = data
+    this.api.getMovies().subscribe((data: MoviesI[] )=>{
+      this.movies = Object.entries(data)[1][1]
+      console.log(this.movies);     
+      
     })
-  }
+  } 
+  
 }

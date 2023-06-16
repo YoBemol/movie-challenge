@@ -1,10 +1,10 @@
 <p>movies works!</p>
 
-<div *ngFor="let movie of movies | keyvalue">
-     <div *ngFor="let movieAux of movie | keyvalue">
+<div *ngFor="let movie of movies">
+     <h1>{{movie.title}}</h1>
+      <!-- <div *ngFor="let movieAux of movie | keyvalue">
          {{movieAux.value}}
-     </div>  
+     </div>   -->
         
 </div>
-<!-- <h1>{{movies.title}}</h1>
-<p> {{movies.poster_path}} </p> -->
+
