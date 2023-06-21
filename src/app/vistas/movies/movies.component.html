@@ -1,10 +1,27 @@
 <p>movies works!</p>
 
-<div *ngFor="let movie of movies">
-     <h1>{{movie.title}}</h1>
-      <!-- <div *ngFor="let movieAux of movie | keyvalue">
-         {{movieAux.value}}
-     </div>   -->
+<!-- <ul *ngFor="let movie of movies.results">
+     <img [src]="'https://image.tmdb.org/t/p/original'+movie.backdrop_path" alt="movies" width="640" height="480">
+     <li>{{movie.title}}</li>
+     <li> {{movie.overview}} </li>
+     <li> {{movie.release_date}} </li>    
         
-</div>
+</ul> -->
+
+     <div class="row justify-content-md-center">
+          <div class="col-md-auto p-2" *ngFor="let movie of movies.results">
+               <p-card [header]="movie.title" [subheader]="'Fecha lanzamiento: '+movie.release_date" [style]="{ width: '360px' }">
+                    <ng-template pTemplate="header">
+                        <img alt="Movie" [src]="'https://image.tmdb.org/t/p/original'+ movie.backdrop_path" />
+                    </ng-template>
+                    <p>
+                         {{movie.overview}}
+                    </p>
+                    <ng-template pTemplate="footer">
+                        <!-- <p-button label="Save" icon="pi pi-check"></p-button> -->
+                    </ng-template>
+                </p-card>
+          </div>
+     </div>
+
 
