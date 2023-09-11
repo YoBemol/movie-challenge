@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { MoviesInterface } from '../../models/movies.interface';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs';
-import { environment } from 'src/enviroments/enviroment';
+//import { environment } from 'src/enviroments/enviroment';
+import { environment } from 'src/apikey'
 //require('dotenv').config();
 
 @Injectable({
