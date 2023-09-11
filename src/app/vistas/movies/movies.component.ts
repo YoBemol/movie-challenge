@@ -28,8 +28,9 @@ export class MoviesComponent implements OnInit {
     this.api.getMovies().subscribe((data) => { //data: MoviesI[]
       this.movies = data//Object.entries(data)[1][1]
       console.log(this.movies);
-
     })
   }
-
+  seeInfo(id:number){
+    this.router.navigate([`movies/detail/${id}`])
+  }
 }

@@ -18,7 +18,7 @@
                          {{movie.overview}}
                     </p>
                     <ng-template pTemplate="footer">
-                        <!-- <p-button label="Save" icon="pi pi-check"></p-button> -->
+                        <p-button label="Info" icon="pi pi-check" (click)="seeInfo(movie.id)" ></p-button>
                     </ng-template>
                 </p-card>
           </div>

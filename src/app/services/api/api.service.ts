@@ -3,6 +3,7 @@ import { MoviesInterface } from '../../models/movies.interface';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { environment } from 'src/enviroments/enviroment';
+//require('dotenv').config();
 
 @Injectable({
   providedIn: 'root'
@@ -25,3 +26,4 @@ export class ApiService {
     return this.http.get<MoviesInterface.MoviesResponse>(ruta, {headers});// arreglar debe entregarme solo peliculas no todo http
   }
 }
+//console.log(process.env);
